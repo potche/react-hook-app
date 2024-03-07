@@ -11,7 +11,7 @@ import ReactDOM from 'react-dom/client';
 // import { MemoHook } from './memos/MemoHook';
 // import { CallbackHook } from './memos/CallbackHook';
 // import { IntroReducer } from './useReducer/IntroReducer';
-import TodoApp from './useReducer/TodoApp';
+import { TodoApp } from './useReducer/TodoApp';
 
 import './index.css';
 

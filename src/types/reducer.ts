@@ -1,7 +1,7 @@
 export type Todo = {
-  id: number;
-  description: string;
-  done: boolean;
+  id?: number;
+  description?: string;
+  done?: boolean;
 };
 
 export type AddTodoAction = {
