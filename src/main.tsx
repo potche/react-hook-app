@@ -9,11 +9,14 @@ import ReactDOM from 'react-dom/client';
 // import { FocusScreen } from './useRef/FocusScreen';
 // import { Memorize } from './memos/Memorize';
 // import { MemoHook } from './memos/MemoHook';
-import { CallbackHook } from './memos/CallbackHook';
+// import { CallbackHook } from './memos/CallbackHook';
+// import { IntroReducer } from './useReducer/IntroReducer';
+import TodoApp from './useReducer/TodoApp';
+
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <CallbackHook />
+    <TodoApp />
   </React.StrictMode>
 );
