@@ -10,7 +10,7 @@ export const TodoAdd = ({ onNewTodo }: { onNewTodo: (todo: Todo) => void }) => {
     event.preventDefault();
     if (description?.length) {
       onNewTodo({
-        id: new Date().getTime(),
+        id: new Date().getTime() * 3,
         description,
         done: false,
       });
