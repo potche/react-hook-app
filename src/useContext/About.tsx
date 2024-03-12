@@ -1,3 +1,12 @@
+import { useContext } from 'react';
+import { UserContext } from './context/UserContext';
+
 export const About = () => {
-  return <div>About</div>;
+  const { user } = useContext(UserContext);
+  return (
+    <>
+      <div>About</div>
+      <small>{JSON.stringify(user)}</small>
+    </>
+  );
 };

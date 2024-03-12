@@ -13,14 +13,15 @@ import { BrowserRouter } from 'react-router-dom';
 // import { CallbackHook } from './memos/CallbackHook';
 // import { IntroReducer } from './useReducer/IntroReducer';
 // import { TodoApp } from './useReducer/TodoApp';
-import { MainApp } from './useContext/MainApp';
+import { Layout } from './useLayoutEffect/Layout';
+// import { MainApp } from './useContext/MainApp';
 
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
     <React.StrictMode>
-      <MainApp />
+      <Layout />
     </React.StrictMode>
   </BrowserRouter>
 );

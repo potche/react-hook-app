@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 type Data = { author: string; quote: string };
 type Resp = {
-  data: Data[] | null;
+  data: Data[];
   isLoading: boolean;
   hasError: string | null;
 };
@@ -10,7 +10,7 @@ type Resp = {
 export const useFetch = (url: string) => {
   console.log({ url });
   const [state, setState] = useState<Resp>({
-    data: null,
+    data: [],
     isLoading: true,
     hasError: null,
   });
@@ -20,6 +20,7 @@ export const useFetch = (url: string) => {
       ...state,
       isLoading: true,
     });
+
     const resp = await fetch(url);
     const data = await resp.json();
     setState({
