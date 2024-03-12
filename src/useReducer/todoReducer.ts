@@ -1,9 +1,6 @@
 import { AddTodoAction, Todo } from '../types/reducer';
 
-export const todoReducer = (
-  initialState: Todo[] = [],
-  action: AddTodoAction
-) => {
+export const todoReducer = (initialState: Todo[], action: AddTodoAction) => {
   switch (action.type) {
     case '[TODO] Add todo':
       return [...initialState, action.payload];
@@ -14,14 +11,15 @@ export const todoReducer = (
     case '[TODO] Toggle todo':
       return initialState.map((todo) => {
         if (todo.id === action.payload.id) {
-          return {
+          const todoToggle = {
             ...todo,
             done: !todo.done,
           };
-        }
 
-        console.log({ todo });
-        return todo;
+          return todoToggle;
+        } else {
+          return todo;
+        }
       });
     default:
       return initialState;

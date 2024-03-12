@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { todoReducer } from '../../src/useReducer/todoReducer';
-import { AddTodoAction } from '../../src/types/reducer';
+import { AddTodoAction, Todo } from '../../src/types/reducer';
 
 describe('Pruebas en todoReducer', () => {
   const initialState = [{ id: 1, description: 'Test TODO', done: false }];
@@ -26,19 +26,23 @@ describe('Pruebas en todoReducer', () => {
       type: '[TODO] Remove todo',
       payload: initialState[0],
     };
-
     const newState = todoReducer(initialState, action);
 
     expect(newState.length).toBe(0);
   });
 
   test('debe de toggle del TODO', () => {
+    const actionAdd: Todo = {
+      id: 2,
+      description: 'Test TODO #2',
+      done: false,
+    };
+
     const action: AddTodoAction = {
       type: '[TODO] Toggle todo',
       payload: initialState[0],
     };
-
-    const [newState] = todoReducer(initialState, action);
+    const [newState] = todoReducer([...initialState, actionAdd], action);
 
     expect(newState.done).toBeTruthy();
   });

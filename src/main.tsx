@@ -12,8 +12,8 @@ import { BrowserRouter } from 'react-router-dom';
 // import { MemoHook } from './memos/MemoHook';
 // import { CallbackHook } from './memos/CallbackHook';
 // import { IntroReducer } from './useReducer/IntroReducer';
-// import { TodoApp } from './useReducer/TodoApp';
-import { Layout } from './useLayoutEffect/Layout';
+import { TodoApp } from './useReducer/TodoApp';
+// import { Layout } from './useLayoutEffect/Layout';
 // import { MainApp } from './useContext/MainApp';
 
 import './index.css';
@@ -21,7 +21,7 @@ import './index.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
     <React.StrictMode>
-      <Layout />
+      <TodoApp />
     </React.StrictMode>
   </BrowserRouter>
 );
