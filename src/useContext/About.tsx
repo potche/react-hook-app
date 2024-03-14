@@ -5,7 +5,7 @@ export const About = () => {
   const { user } = useContext(UserContext);
   return (
     <>
-      <div>About</div>
+      <div aria-label="div">About</div>
       <small>{JSON.stringify(user)}</small>
     </>
   );

@@ -4,7 +4,7 @@ import { fireEvent, render } from '@testing-library/react';
 
 import { TodoItem } from '../../src/useReducer/TodoItem';
 
-describe('Pruebas en <todoItem />', () => {
+describe('Pruebas en <TodoItem />', () => {
   const todo = { id: 1, description: 'Test TODO', done: false };
   const onDeleteTodoMock = vi.fn();
   const onToggleTodoMock = vi.fn();

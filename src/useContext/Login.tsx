@@ -4,8 +4,8 @@ import { UserContext } from './context/UserContext';
 export const Login = () => {
   const { user, setUser } = useContext(UserContext);
   return (
-    <div>
-      Login <small>{JSON.stringify(user)}</small>
+    <div aria-label="div">
+      Login <small aria-label="small">{JSON.stringify(user)}</small>
       <button
         className="btn btn-primary"
         onClick={() =>
