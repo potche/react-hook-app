@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
 // import { HooksApp } from './HooksApp.tsx';
 // import { CounterApp } from './useState/CounterApp';
@@ -9,11 +10,18 @@ import ReactDOM from 'react-dom/client';
 // import { FocusScreen } from './useRef/FocusScreen';
 // import { Memorize } from './memos/Memorize';
 // import { MemoHook } from './memos/MemoHook';
-import { CallbackHook } from './memos/CallbackHook';
+// import { CallbackHook } from './memos/CallbackHook';
+// import { IntroReducer } from './useReducer/IntroReducer';
+import { TodoApp } from './useReducer/TodoApp';
+// import { Layout } from './useLayoutEffect/Layout';
+// import { MainApp } from './useContext/MainApp';
+
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <CallbackHook />
-  </React.StrictMode>
+  <BrowserRouter>
+    <React.StrictMode>
+      <TodoApp />
+    </React.StrictMode>
+  </BrowserRouter>
 );

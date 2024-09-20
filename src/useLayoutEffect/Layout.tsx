@@ -1,8 +1,9 @@
 import { useCounter, useFetch } from '../hooks';
 import { LoadingQuote, Quote } from '../examples';
 
-export const Layout = () => {
+export const Layout = (): JSX.Element => {
   console.log('Layout');
+
   const { counter, increment } = useCounter(1);
   const { data, isLoading, hasError } = useFetch(
     `https://api.breakingbadquotes.xyz/v1/quotes/${counter}`
@@ -10,7 +11,8 @@ export const Layout = () => {
 
   let author = '';
   let quote = '';
-  if (data) {
+  console.log({ data });
+  if (data.length) {
     author = data[0].author;
     quote = data[0].quote;
   }
